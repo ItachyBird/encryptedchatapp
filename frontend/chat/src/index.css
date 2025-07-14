@@ -1,0 +1,45 @@
+/* Add this in your main CSS (e.g. index.css or App.css) */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+
+:root {
+  /* Light Mode (Elegant Cream Theme) */
+  --main-bg-light: #f8f3ea;           /* Warm creamy background */
+  --main-comp-light: #e6d8c7;         /* Light peachy panels */
+  --text-light: #3b3b3b;              /* Deep warm gray for readability */
+  --border-light: #e6ddd5;            /* Soft beige border */
+
+  --accent-color-light: #0b1957;      /* Navy-like accent */
+  --primary-gradient-light: linear-gradient(100deg, #0b1957, #9eccfa); /* Coral-pink gradient */
+
+  --sent-bg-light: #e6d8c7;
+  --received-bg-light: #d7d4cf;
+
+  /* Dark Mode (Modern Charcoal Theme) */
+  --main-bg-dark: #1e1e26;            /* Slightly lighter charcoal */
+  --main-comp-dark: #2b2b36;          /* Muted indigo-charcoal panel */
+  --text-dark: #e9e9f0;               /* Soft violet-tinted white */
+  --border-dark: #3e3d4b;             /* Subtle graphite border */
+
+  --accent-color-dark: #186ee6;       /* Cool pastel violet */
+  --primary-gradient-dark: #0047ab; /* Vibrant violet-purple gradient */
+
+  --sent-bg-dark: #2b2b36;
+  --received-bg-dark: #5c6571;
+}
+
+

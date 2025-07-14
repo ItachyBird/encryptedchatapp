@@ -1,0 +1,191 @@
+.chat-header {
+  padding: 12px 16px;
+  background: var(--main-comp-light);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  margin: 10px;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.chat-header .hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.chat-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chat-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Connection dot */
+.connection-status {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background-color: orange;
+}
+.connection-status.connected {
+  background-color: #22c55e;
+}
+.connection-status.connecting {
+  background-color: #f97316;
+}
+
+/* Remove Friend Button */
+.remove-friend-btn {
+  padding: 4px 10px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.remove-friend-btn:hover {
+  background: #dc2626;
+}
+
+/* Dark mode */
+.chat-header.dark {
+  background: var(--main-comp-dark);
+  color: var(--text-dark);
+  border: 1px solid var(--border-dark);
+}
+.chat-header.dark .hamburger,
+.chat-header.dark .remove-friend-btn {
+  color: var(--text-dark);
+}
+.chat-header.dark .remove-friend-btn {
+  background: #f87171;
+}
+.chat-header.dark .remove-friend-btn:hover {
+  background: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chat-header {
+    padding: 10px 12px;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background: var(--main-comp-light);
+  }
+
+  .chat-header.dark {
+    background: var(--main-comp-dark);
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .chat-header .hamburger {
+    display: block;
+    margin-right: auto;
+    color: var(--accent-color);
+  }
+
+  .chat-header.dark .hamburger {
+    color: var(--accent-color);
+  }
+
+  .chat-header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .chat-header-left {
+    gap: 6px;
+  }
+
+  .chat-header-right {
+    margin-left: auto;
+  }
+
+  .remove-friend-btn {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+  }
+}
+
+
+/* Ellipsis icon */
+.ellipsis-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 16px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 4px 0;
+  z-index: 1000;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #ef4444;
+  transition: background 0.2s;
+}
+
+.dropdown-menu button:hover {
+  background: #fef2f2;
+}
+
+/* Dark mode support */
+.dropdown-menu.dark {
+  background: var(--main-comp-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.dropdown-menu.dark button {
+  color: #f87171;
+}
+
+.dropdown-menu.dark button:hover {
+  background: #3f3f46;
+}

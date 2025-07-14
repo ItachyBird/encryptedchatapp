@@ -1,0 +1,137 @@
+/* Reset & Layout Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--main-bg-light);
+  color: var(--text-light);
+}
+
+body.dark {
+  background: var(--main-bg-dark);
+  color: var(--text-dark);
+}
+
+.chat-container {
+  display: flex;
+  height: 100vh;
+  background: var(--main-bg-light);
+  overflow: hidden;
+}
+
+body.dark .chat-container {
+  background: var(--main-bg-dark);
+}
+
+/* Chat Panel */
+.chat-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--main-comp-light);
+  position: relative;
+  height: 100%;
+}
+
+body.dark .chat-panel {
+  background: var(--main-comp-dark);
+}
+
+/* Connection Status */
+.connection-status.connecting {
+  color: var(--accent-color-light);
+}
+
+body.dark .connection-status.connecting {
+  color: var(--accent-color-dark);
+}
+
+/* Chat Header for Mobile */
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--main-comp-light);
+    padding: 10px 12px;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+
+  body.dark .chat-header {
+    background: var(--main-comp-dark);
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .chat-header h3 {
+    flex: 1;
+    text-align: right;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--accent-color-light);
+    font-weight: bold;
+  }
+
+  body.dark .chat-header h3 {
+    color: var(--accent-color-dark);
+  }
+}
+
+/* Pending Requests Box */
+.pending-requests {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--main-comp-light);
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  color: var(--text-light);
+}
+
+body.dark .pending-requests {
+  background-color: var(--main-comp-dark);
+  border: 1px solid var(--border-dark);
+  color: var(--text-dark);
+}
+
+.pending-requests h4 {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+/* Request Items */
+.request-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+}
+
+.request-item button {
+  margin-left: 5px;
+  cursor: pointer;
+  background: var(--primary-gradient-light);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+body.dark .request-item button {
+  background: var(--primary-gradient-dark);
+}
+
+.request-item button:hover {
+  opacity: 0.8;
+}
